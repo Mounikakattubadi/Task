@@ -1,3 +1,5 @@
+/* Cards.css */
+
 /* Card Container */
 .card1 {
   position: relative;
@@ -109,7 +111,7 @@
   font-weight: bold;
 }
 
-/* ✅ Right section (score + button in one row) */
+/* Right section (score + button) */
 .card1__right {
   display: flex;
   align-items: center;
@@ -139,7 +141,8 @@
 .card1__stars {
   color: #4caf50;
   font-size: 1rem;
-  margin-left: 6px;
+  margin-left: 35px;
+  margin-top: -26%;
 }
 
 .card1__score-text {
@@ -148,6 +151,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  margin-left: 30%;
 }
 
 /* Tooltip for Score */
@@ -223,6 +227,7 @@
 /* Visit Site tooltip */
 .tooltip-container {
   position: relative;
+  margin-left: 10%;
 }
 
 .tooltip {
@@ -266,8 +271,6 @@
 /* ------------------ */
 /* 📱 Responsive CSS  */
 /* ------------------ */
-
-/* Tablet view (≤1024px) */
 @media (max-width: 1024px) {
   .card1 {
     flex-direction: column;
@@ -294,83 +297,87 @@
   }
 }
 
-/* Mobile view (≤768px) */
+
+@media (max-width: 480px) {
+  .card1__title,
+  .card1__features {
+    display: none;
+  }
+
 @media (max-width: 768px) {
   .card1 {
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .card1__number {
-    left: 10px;
-    top: 70px;
-    transform: none;
-  }
-
-  .card1__logo img {
-    width: 120px;
-    margin: 10px auto;
-    display: block;
-  }
-
-  .card1__title {
-    font-size: 0.95rem;
-  }
-
-  .card1__features li {
-    font-size: 0.8rem;
-  }
-
-  .card1__button {
-    width: 100%;
-    text-align: center;
-  }
-
-  .card1__right {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap; /* allow score/button to move below */
     align-items: flex-start;
-    width: 100%;
-    gap: 10px;
-  }
-}
-
-/* Small Mobile (≤480px) */
-@media (max-width: 480px) {
-  .card1 {
-    padding: 12px;
+    padding: 15px;
     gap: 12px;
   }
 
-  .card1__title {
-    font-size: 0.9rem;
+  /* Image column */
+  .card1__logo img {
+    width: 100px;
+    display: block;
+    margin: 0;
   }
 
-  .card1__coupon {
-    font-size: 0.75rem;
+  /* Content column */
+  .card1__content {
+    flex: 1;
+    margin-left: 10px;
   }
 
-  .card1__features li {
-    font-size: 0.75rem;
+  /* Hide features */
+  .card1__features {
+    display: none;
   }
 
-  .card1__score-value {
-    font-size: 1.2rem;
+  /* Score under image (left column) */
+  .card1__score {
+    flex-basis: 100px; /* same width as image */
+    margin-top: 8px;
+    margin-left: 10%;
+  }
+
+  /* Visit button under title (right column) */
+  .card1__right {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 8px;
   }
 
   .card1__button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+    width: auto;
+  }
+}
+
+
+
+  .card1__logo img {
+    width: 150px;
+    margin-top: 30%;
   }
 
-  .score-tooltip {
-    width: 200px; /* prevent overflow */
-    left: 0;
-    transform: none;
+  .card1__content {
+    margin-left: 0px;
+    margin-top: 15%;
   }
 
-  .tooltip {
-    width: 180px;
-    left: 0;
-    transform: none;
+  .card1__title {
+    font-size: 0.85rem;
+  }
+
+  .card1__features li {
+    font-size: 0.7rem;
+  }
+
+  .card1__score-value {
+    font-size: 1.1rem;
+  }
+
+  .card1__button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
   }
 }
