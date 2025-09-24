@@ -1,0 +1,131 @@
+/* Basic reset for the component */
+.container { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+
+/* Header wrapper */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+/* Nav layout */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 64px;
+}
+
+/* Brand / logo */
+.nav__brand { display: flex; align-items: center; text-decoration: none; }
+.nav__logo {
+  height: 42px;       /* tweak to fit your logo */
+  width: auto;
+  display: block;
+}
+
+/* Toggle (mobile) */
+.nav__toggle {
+  display: none; /* hidden on desktop */
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Hamburger styling */
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #1f2937;
+  border-radius: 2px;
+  position: relative;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.hamburger::before { top: -6px; }
+.hamburger::after { top: 6px; }
+
+/* Toggle open state */
+.nav__toggle.open .hamburger {
+  background: transparent;
+}
+.nav__toggle.open .hamburger::before {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav__toggle.open .hamburger::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Links */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav__link {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 600;
+  padding: 6px 8px;
+  transition: color .15s ease, opacity .15s ease;
+}
+.nav__link:hover,
+.nav__link:focus {
+  color: #0b63ff;
+  outline: none;
+}
+
+/* Responsive behaviour */
+@media (max-width: 860px) {
+  .nav__toggle { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* hide desktop links by default on narrow screens */
+  .nav__links {
+    position: absolute;
+    top: 64px;
+    right: 16px;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    padding: 8px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    min-width: 160px;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    border-radius: 6px;
+  }
+
+  /* show when open */
+  .nav__links.nav__links--open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav__item { width: 100%; }
+  .nav__link {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+  }
+}

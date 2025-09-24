@@ -1,0 +1,195 @@
+.special-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-width: 900px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 40px 50px;   /* taller card */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  min-height: 260px;    /* increased height */
+}
+
+/* Full-width Most Popular banner */
+.special-card__badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #b6d63f;   /* green background */
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* Number circle on left */
+.special-card__number {
+  position: absolute;
+  left: -15px;
+  top: 40%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo */
+.special-card__logo img {
+  width: 200px;
+  margin-top: 25%;
+  height: auto;
+  margin-right: 100px;
+}
+
+/* Content middle */
+.special-card__content {
+  flex: 1;
+}
+
+.special-card__content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.special-card__offer {
+  border: 1px dashed #000;
+  padding: 6px 12px;
+  font-size: 13px;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.special-card__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.special-card__content li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.special-card__content li::before {
+  content: "✓";
+  color: green;
+  margin-right: 8px;
+}
+
+/* Right section */
+.special-card__right {
+  text-align: center;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Visits */
+.special-card__visits {
+  font-size: 12px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Score */
+.special-card__score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8%;
+  margin-bottom: 15px;
+  margin-right: 10%;
+}
+
+.special-card__score .score {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.special-card__score .stars {
+  color: #28a745;
+  font-size: 16px;
+  margin-top: -2px; /* closer */
+}
+
+.special-card__score .label {
+  font-size: 12px;
+  color: #555;
+  margin-top: 2px;
+}
+
+/* Tooltip container */
+.tooltips-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 10%;
+  max-width: 100%; /* stays inside card */
+  overflow: hidden;
+}
+
+/* Tooltip hidden by default */
+.tooltips {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Show tooltip on hover */
+.tooltips-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Button */
+.visit-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.visit-btn:hover {
+  background: #0056b3;
+}

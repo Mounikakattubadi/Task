@@ -1,0 +1,264 @@
+/* Card Container */
+.card1 {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #fff;
+  padding: 25px 0px 25px 100px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-width: 900px;
+  margin: 20px auto;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Number circle */
+.card1__number {
+  position: absolute;
+  left: -20px;
+  top: 25%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+/* Most Popular label */
+.card1__tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #b6e138;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* Logo */
+.card1__logo img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 27%;
+  margin-left: -15%;
+}
+
+/* Content */
+.card1__content {
+  flex: 1;
+}
+
+.card1__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Coupon style box */
+.card1__coupon {
+  border: 2px dashed #000;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.card1__coupon::after {
+  content: "✂";
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Features */
+.card1__features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.card1__features li {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.card1__features li::before {
+  content: "✓";
+  margin-right: 6px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* ✅ Right section (score + button in one row) */
+.card1__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  min-width: 250px; /* ensures spacing like screenshot */
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+/* Score block */
+.card1__score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* text aligns left like screenshot */
+  position: relative;
+  cursor: pointer;
+  margin-right: 15%;
+}
+
+.card1__score-value {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.card1__stars {
+  color: #4caf50;
+  font-size: 1rem;
+  margin-left: 6px;
+}
+
+.card1__score-text {
+  font-size: 0.8rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Tooltip for Score */
+.score-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 6px;
+  width: 260px;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.card1__score:hover .score-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.score-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.tooltip-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.tooltip-item p {
+  margin: 2px 0 0;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+.tooltip-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background: #222;
+  border: 2px solid currentColor;
+}
+
+.tooltip-score.green {
+  color: #2ecc71;
+}
+
+.tooltip-score.blue {
+  color: #3498db;
+}
+
+/* Visit Site tooltip */
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 220px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px 12px;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+}
+
+/* Visit Site button */
+.card1__button {
+  background: #0b63ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card1__button:hover {
+  background: #084fcc;
+}

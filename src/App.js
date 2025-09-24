@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Features from "./Features";
+import Cards from "./Cards";
+import SpecialCard from "./SpecialCard";
+import InfoPage from "./InfoPage";
+import Footer from "./Footer"; // import footer
+import ScrollToTopButton from './ScrollToTopButton';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Features />
+        <Cards />
+        <SpecialCard />
+        <InfoPage /> {/* Long informational section */}
+      </main>
+      <Footer /> {/* Footer at the bottom */}
+            <ScrollToTopButton />
+
+    </>
   );
 }
 

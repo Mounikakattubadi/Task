@@ -1,0 +1,70 @@
+/* Features.css */
+.features {
+  padding: 10px 0px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  margin-left: -26%;
+}
+
+.features__container {
+  display: flex;
+  gap: 10px; /* smaller gap */
+  flex-wrap: wrap;
+  max-width: 900px;
+  justify-content: center;
+}
+
+.feature {
+  display: flex;
+  align-items: center; /* icon + text side by side */
+  gap: 10px; /* spacing between icon and text */
+  text-align: left;
+}
+
+.feature__icon {
+  width: 25px; /* smaller size */
+  height: 25px;
+}
+
+.feature__title {
+  font-size: 1rem; /* smaller font */
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features__container {
+    gap: 20px;
+  }
+
+  .feature__icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .feature__title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features__container {
+    flex-direction: column; /* stack vertically on small screens */
+    gap: 15px;
+  }
+
+  .feature {
+    justify-content: flex-start;
+  }
+
+  .feature__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .feature__title {
+    font-size: 0.9rem;
+  }
+}

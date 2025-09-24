@@ -1,0 +1,167 @@
+.info-page {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.info-wrapper {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Left Content */
+.info-left {
+  flex: 0 0 70%;
+}
+
+.info-container {
+  color: #1f2937;
+  line-height: 1.7;
+}
+
+.info-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+ul {
+  margin-bottom: 15px;
+  padding-left: 25px;
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin: 25px 0;
+  background-color: #eeecec;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.ro-logo-image {
+  width: 140px;
+  height: auto;
+}
+
+/* Just text (not a button) */
+.special-card__offer {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Blue Visit Site button */
+.cta-button.secondary {
+  background-color: #0b63ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button.secondary:hover {
+  background-color: #084bcc;
+}
+
+/* Right Sidebar */
+.info-right {
+  flex: 0 0 auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f0eeee;
+  padding: 25px;
+  align-self: flex-start;
+}
+
+.must-read-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.must-read-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.must-read-card img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.must-read-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.must-read-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #555;
+}
+
+.read-more {
+  display: inline-block;
+  color: #0b63ff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+  color: #084bcc;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .info-wrapper {
+    flex-direction: column;
+  }
+
+  .info-left,
+  .info-right {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
