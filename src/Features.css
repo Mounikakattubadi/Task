@@ -43,7 +43,9 @@
     width: 35px;
     height: 35px;
   }
-
+.features{
+  display: none;
+}
   .feature__title {
     font-size: 0.95rem;
   }

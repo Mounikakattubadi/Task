@@ -5,24 +5,24 @@ import Features from "./Features";
 import Cards from "./Cards";
 import SpecialCard from "./SpecialCard";
 import InfoPage from "./InfoPage";
-import Footer from "./Footer"; // import footer
-import ScrollToTopButton from './ScrollToTopButton';
+import Footer from "./Footer";
+import ScrollToTopButton from "./ScrollToTopButton";
+import "./App.css"; // add this
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      <main>
+      <main className="main-content">
         <Hero />
         <Features />
         <Cards />
         <SpecialCard />
-        <InfoPage /> {/* Long informational section */}
+        <InfoPage />
       </main>
-      <Footer /> {/* Footer at the bottom */}
-            <ScrollToTopButton />
-
-    </>
+      <Footer />
+      <ScrollToTopButton />
+    </div>
   );
 }
 

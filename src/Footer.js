@@ -1,17 +1,15 @@
 import React from "react";
 import "./Footer.css";
-import footerLogo from "./images/footerLogo.svg"; // adjust path as needed
+import footerLogo from "./images/footerLogo.svg"; // adjust path
 
 const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        {/* Logo Left */}
         <div className="footer-logo">
           <img src={footerLogo} alt="BestWeightLossMeds Logo" />
         </div>
 
-        {/* Links Right */}
         <ul className="footer-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Knowledge</a></li>
@@ -22,9 +20,8 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Copyright Center */}
       <div className="footer-bottom">
-        <p>Copyright © 2025 BestWeightLossMeds. All Rights Reserved.</p>
+        <p>© 2025 BestWeightLossMeds. All Rights Reserved.</p>
       </div>
     </footer>
   );
