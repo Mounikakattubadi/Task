@@ -170,7 +170,7 @@
 }
 
 /* Show tooltip on hover */
-.tooltips-container:hover .tooltip {
+.tooltips-container:hover .tooltips {
   visibility: visible;
   opacity: 1;
 }
@@ -192,4 +192,71 @@
 
 .visit-btn:hover {
   background: #0056b3;
+}
+
+/* -------------------- */
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .special-card {
+    flex-direction: column;
+    padding: 20px 15px;
+    min-height: auto;
+  }
+
+  /* Badge stays full width */
+  .special-card__badge {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+
+  /* Logo smaller and centered */
+  .special-card__logo img {
+    width: 120px;
+    margin: 0 auto 15px auto;
+    display: block;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  /* Content adjustments */
+  .special-card__content {
+    text-align: center;
+  }
+
+  .special-card__content h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .special-card__offer {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .special-card__content li {
+    font-size: 13px;
+  }
+
+  /* Score and tooltip center below content */
+  .special-card__score {
+    margin: 15px 0;
+    margin-right: 0;
+  }
+
+  .tooltips-container {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Tooltip adjustments */
+  .tooltips {
+    bottom: 140%;
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .visit-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
 }

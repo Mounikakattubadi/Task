@@ -115,7 +115,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
-  min-width: 250px; /* ensures spacing like screenshot */
+  min-width: 250px;
   margin-top: 5%;
   margin-left: 5%;
 }
@@ -124,7 +124,7 @@
 .card1__score {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* text aligns left like screenshot */
+  align-items: flex-start;
   position: relative;
   cursor: pointer;
   margin-right: 15%;
@@ -261,4 +261,116 @@
 
 .card1__button:hover {
   background: #084fcc;
+}
+
+/* ------------------ */
+/* 📱 Responsive CSS  */
+/* ------------------ */
+
+/* Tablet view (≤1024px) */
+@media (max-width: 1024px) {
+  .card1 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .card1__logo img {
+    width: 150px;
+    margin: 10px 0;
+  }
+
+  .card1__right {
+    margin-top: 15px;
+    margin-left: 0;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .card1__score {
+    margin-right: 0;
+  }
+}
+
+/* Mobile view (≤768px) */
+@media (max-width: 768px) {
+  .card1 {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .card1__number {
+    left: 10px;
+    top: 10px;
+    transform: none;
+  }
+
+  .card1__logo img {
+    width: 120px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .card1__title {
+    font-size: 0.95rem;
+  }
+
+  .card1__features li {
+    font-size: 0.8rem;
+  }
+
+  .card1__button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card1__right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .card1 {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .card1__title {
+    font-size: 0.9rem;
+  }
+
+  .card1__coupon {
+    font-size: 0.75rem;
+  }
+
+  .card1__features li {
+    font-size: 0.75rem;
+  }
+
+  .card1__score-value {
+    font-size: 1.2rem;
+  }
+
+  .card1__button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .score-tooltip {
+    width: 200px; /* prevent overflow */
+    left: 0;
+    transform: none;
+  }
+
+  .tooltip {
+    width: 180px;
+    left: 0;
+    transform: none;
+  }
 }

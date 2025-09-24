@@ -1,3 +1,5 @@
+/* -------------------- */
+/* Desktop Styles */
 .info-page {
   background-color: #ffffff;
   padding: 50px 20px;
@@ -153,7 +155,8 @@ ul {
   color: #084bcc;
 }
 
-/* Responsive */
+/* -------------------- */
+/* Tablet / Mobile Responsive */
 @media (max-width: 1024px) {
   .info-wrapper {
     flex-direction: column;
@@ -163,5 +166,127 @@ ul {
   .info-right {
     flex: 0 0 100%;
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-page {
+    padding: 30px 15px;
+  }
+
+  .info-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Left Content */
+  .info-left {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .info-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 25px;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-bottom: 12px;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .ro-logo-image {
+    width: 120px;
+  }
+
+  .special-card__offer {
+    font-size: 14px;
+  }
+
+  .cta-button.secondary {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  /* Right Sidebar */
+  .info-right {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .must-read-title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .must-read-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .must-read-card p {
+    font-size: 0.85rem;
+  }
+
+  .read-more {
+    font-size: 0.9rem;
+  }
+
+  /* Ensure images scale on small screens */
+  .must-read-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-title {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p, .special-card__offer {
+    font-size: 0.9rem;
+  }
+
+  .cta-button.secondary {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .ro-logo-image {
+    width: 100px;
   }
 }

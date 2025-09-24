@@ -21,7 +21,7 @@ const Hero = () => {
           fit for your unique needs. Explore treatment plans, such as{" "}
           <strong>Ozempic®</strong> and pick a weight loss med to get on track
           and kickstart a healthier you.
-        </p>
+        </p>    
         <p className="hero__updated">
           <span className="dot"></span> Last Updated: September 2025
         </p>

@@ -58,6 +58,8 @@
     padding: 20px;
     min-height: 120vh;
     justify-content: center;
+    background-size: contain !important;
+margin-top: -90%;
   }
 
   .hero__content {
