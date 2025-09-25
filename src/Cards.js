@@ -103,64 +103,74 @@ const Cards = () => {
         <>
             {cardsData.map((card) => (
                 <div className="card1" key={card.id}>
-                    {/* Number */}
-                    <div className="card1__number">{card.id}</div>
+  {/* Number */}
+  <div className="card1__number">{card.id}</div>
 
-                    {/* Most Popular tag only for 1st card */}
-                    {card.popular && <div className="card1__tag">Most Popular</div>}
+  {/* Most Popular tag only for 1st card */}
+  {card.popular && <div className="card1__tag">Most Popular</div>}
 
-                    {/* Logo */}
-                    <div className="card1__logo">
-                        <img src={card.logo} alt="logo" />
-                    </div>
+  {/* Logo */}
+  <div className="card1__logo">
+    <img src={card.logo} alt="logo" />
+  </div>
 
-                    {/* Main content */}
-                    <div className="card1__content">
-                        {card.title && <h2 className="card1__title">{card.title}</h2>}
+  {/* Main content */}
+  <div className="card1__content">
+    {card.title && <h2 className="card1__title">{card.title}</h2>}
 
-                        {card.coupon && <div className="card1__coupon">{card.coupon}</div>}
+    {card.coupon && <div className="card1__coupon">{card.coupon}</div>}
 
-                        <ul className="card1__features">
-                            {card.features.map((feature, idx) => (
-                                <li key={idx}>{feature}</li>
-                            ))}
-                        </ul>
-                    </div>
+    <ul className="card1__features">
+      {card.features.map((feature, idx) => (
+        <li key={idx}>{feature}</li>
+      ))}
+    </ul>
+  </div>
 
-                    {/* Score + Button */}
-                    <div className="card1__right">
-                        <div className="card1__score">
-                            <span className="card1__score-value">{card.score}</span>
-                            <span className="card1__stars">{card.stars}</span>
-                            <div className="card1__score-text">Our score ⓘ</div>
+  {/* Score + Button */}
+  <div className="card1__right">
+    <div className="card1__score">
+      <span className="card1__score-value">{card.score}</span>
+      <span className="card1__stars">{card.stars}</span>
+      <div className="card1__score-text">Our score ⓘ</div>
 
-                            {/* New Tooltip for Score */}
-                            <div className="score-tooltip">
-                                <div className="tooltip-item">
-                                    <strong>Trustpilot Score</strong>
-                                    <p>Based on 1,09,855 reviews</p>
-                                    <span className="tooltip-score green">9.8</span>
-                                </div>
-                                <hr />
-                                <div className="tooltip-item">
-                                    <strong>Brand Reputation</strong>
-                                    <p>Based on web trends</p>
-                                    <span className="tooltip-score blue">9.6</span>
-                                </div>
-                            </div>
-                        </div>
+      {/* New Tooltip for Score (desktop only) */}
+      {card.id === 1 && (
+        <div className="score-tooltip">
+          <div className="tooltip-item">
+            <strong>Trustpilot Score</strong>
+            <p>Based on 1,09,855 reviews</p>
+            <span className="tooltip-score green">9.8</span>
+          </div>
+          <hr />
+          <div className="tooltip-item">
+            <strong>Brand Reputation</strong>
+            <p>Based on web trends</p>
+            <span className="tooltip-score blue">9.6</span>
+          </div>
+        </div>
+      )}
+    </div>
 
-                        {/* Visit Site button + tooltip */}
-                        <div className="tooltip-container">
-                            <button className="card1__button">Visit Site</button>
-                            <div className="tooltip">
-                                👤 42,731 people visited this site this month
-                            </div>
-                        </div>
-                    </div>
+    {/* Visit Site button */}
+    <div className="tooltip-container">
+      <button className="card1__button">Visit Site</button>
+      {card.id === 1 && (
+        <div className="tooltip desktop-only">
+          👤 42,731 people visited this site this month
+        </div>
+      )}
+    </div>
+  </div>
 
+  {/* 📱 Static info bar for mobile */}
+  {card.id === 1 && (
+    <div className="mobile-info">
+      👤 Over 2194 people visited this site today
+    </div>
+  )}
+</div>
 
-                </div>
             ))}
         </>
     );

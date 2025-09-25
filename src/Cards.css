@@ -16,23 +16,20 @@
   font-family: Arial, sans-serif;
 }
 
-/* Number circle */
 .card1__number {
   position: absolute;
-  left: -20px;
-  top: 25%;
-  transform: translateY(-50%);
-  background-color: #fff;
-  border: 1px solid #000;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background-color: #f2f2f2; /* light gray background */
+  color: #000;
+  font-size: 14px;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
+  padding: 4px 8px;  /* square/rectangular padding */
+  border-top-left-radius: 4px;   /* optional rounded edges */
+  border-bottom-right-radius: 4px; /* creates "offset tag" look */
+  border: 1px solid #ccc;
 }
+
 
 /* Most Popular label */
 .card1__tag {
@@ -299,11 +296,16 @@
 
 
 @media (max-width: 480px) {
-  .card1__title,
+  .card1__number{
+    left: 2%;
+  }
+  
   .card1__features {
     display: none;
   }
-
+.card1__tag{
+  margin-left: 10%;
+}
 @media (max-width: 768px) {
   .card1 {
     flex-direction: row;
@@ -336,8 +338,14 @@
     flex-basis: 100px; /* same width as image */
     margin-top: 8px;
     margin-left: 10%;
+    border: 2px solid #e6e4e4;
+      padding: 10px;
+    
   }
-
+.tooltip-container{
+  margin-left: 15%;
+  margin-top: 5%;
+}
   /* Visit button under title (right column) */
   .card1__right {
     flex: 1;
@@ -360,9 +368,9 @@
   }
 
   .card1__content {
-    margin-left: 0px;
-    margin-top: 15%;
-  }
+margin-left: 10%;
+    margin-top: 5%; 
+  margin-right: 2%; }
 
   .card1__title {
     font-size: 0.85rem;
@@ -381,3 +389,34 @@
     padding: 6px 12px;
   }
 }
+/* Mobile info bar */
+.mobile-info {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none; /* hide hover tooltip */
+  }
+
+  .mobile-info {
+    display: block !important; /* force show */
+    background-color: #0b63ff !important; /* force blue background */
+    color: #fff !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-top: auto;
+    width: 100%;
+  }
+}
+/* Hide score tooltip on mobile */
+@media (max-width: 768px) {
+  .score-tooltip {
+    display: none !important;
+  }
+}
+

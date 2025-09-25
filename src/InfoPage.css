@@ -291,6 +291,7 @@ ul {
 
   p, .special-card__offer {
     font-size: 0.9rem;
+    margin-right: 5%;
   }
 
   /* CTA adjustments */

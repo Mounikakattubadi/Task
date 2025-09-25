@@ -41,21 +41,38 @@
 .hamburger::before,
 .hamburger::after {
   display: block;
-  width: 22px;
-  height: 2px;
+  width: 22px;         /* default full width */
+  height: 2px;         /* 👈 consistent thickness for all lines */
   background: #1f2937;
   border-radius: 2px;
   position: relative;
-  transition: transform .25s ease, opacity .25s ease;
+  transition: transform .25s ease, opacity .25s ease, width .25s ease;
 }
+
+/* Top + bottom bars */
 .hamburger::before,
 .hamburger::after {
   content: "";
   position: absolute;
-  left: 0;
+  height: 2px;         /* 👈 ensure same thickness */
+  background: inherit; /* same color */
+  border-radius: 2px;
 }
-.hamburger::before { top: -6px; }
-.hamburger::after { top: 6px; }
+
+/* Top line */
+.hamburger::before {
+  top: -6px;
+  left: 0;
+  width: 22px;         /* full width */
+}
+
+/* Bottom line */
+.hamburger::after {
+  top: 6px;
+  right: 0;
+  width: 16px;         /* shorter, aligned right */
+}
+
 
 /* Toggle open state */
 .nav__toggle.open .hamburger {
